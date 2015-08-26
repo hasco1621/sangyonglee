@@ -1,0 +1,17 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+
+                 <div class="panel-heading">
+                    <strong> {{ post.title }} </strong>
+                 </div>
+
+                 <div class="panel-body">
+                     {{ post.content|linebreaks }}
+                 </div>
+
+
+
+             <a href="{% url "blog.views.index" %}" class="btn btn-default">글목록</a>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "blog/layout.html" %}
+
+{% block content %}
+        {% for post in post_list %}
+
+                    <a href="{% url "blog.views.detail" post.pk %}">
+
+                        <div class="caption">
+                            <h5>{{ post.title }}</h5>
+                        </div>
+                    </a>
+                    <a href="{% url "blog.views.detail" post.uuid.hex %}">by {{user}} </a>
+
+        {% endfor %}
+{% endblock %}

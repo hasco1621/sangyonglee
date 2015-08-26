@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <title>출석부</title>
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <h1> Attendence </h1>
+
+                    <table class="table table-hover table-bordered">
+                        <tr style="background-color:yellow">
+                            <td><b>이름</b></td>
+                            <td><b>출석일시</b></td>
+                            <td><b>출석수정</b></td>
+                        </tr>
+
+                        {% for attend in attend_list%}
+                            <tr>
+                                <td>{{attend.student_name}}</td>
+                                <td>{{attend.created_at}}</td>
+                                <td>{{attend.updated_at}}</td>
+                            </tr>
+                        {%endfor%}
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
